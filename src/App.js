@@ -1,9 +1,10 @@
-import React from "react";
-import "./style.css";
-import Home from "./components/Home";
-import Aboutus from "./components/Aboutus";
-import Contact from "./components/Contact";
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import React from 'react';
+import './style.css';
+import Home from './components/Home';
+import Aboutus from './components/Aboutus';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
@@ -15,12 +16,13 @@ export default function App() {
 
     <div>
       <Router>
-         <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Aboutus" element={<Aboutus />} />
-          </Routes>
-        </Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Aboutus" element={<Aboutus />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
